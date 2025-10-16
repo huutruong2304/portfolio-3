@@ -12,7 +12,7 @@ export default function Home() {
       {/* Home */}
       <div className="app-container">
         <TwoColSection>
-          <div className="">
+          <div className="bg-[url('/images/home-vector.png')] bg-cover bg-center">
             <p className="text-gray-500">Hi I am</p>
             <h2 className="text-lg font-semibold text-gray-400">Truong Nguyen</h2>
             <h1 className="text-6xl font-semibold text-primary">UI/UX Designer</h1>
@@ -45,14 +45,19 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="">
-            <div className="bg-card w-2/3 aspect-square mx-auto rounded-full relative">
-              <Image
-                src={'/images/avatar.png'}
-                fill
-                className="object-contain bottom-20"
-                alt="truong nguyen avatar"
-              />
+          <div className="flex justify-end">
+            <div className="relative w-[400px] aspect-square">
+              <div className="bg-card w-full aspect-square mx-auto rounded-full absolute bottom-0 right-0" />
+              <div className="w-full h-[125%] absolute bottom-0 rounded-full overflow-hidden right-0">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={'/images/avatar.png'}
+                    fill
+                    className="object-contain"
+                    alt="truong nguyen avatar"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </TwoColSection>
