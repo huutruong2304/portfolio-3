@@ -1,13 +1,14 @@
 import AppSection from '@/components/custom/app-section'
 import SectionDescription from '@/components/custom/section-description'
 import SectionTitle from '@/components/custom/section-title'
+import ServiceCard from '@/components/custom/service-card'
 import TwoColSection from '@/components/custom/two-col-section'
 import FacebookIcon from '@/components/icons/facebook-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import LinkedinIcon from '@/components/icons/linkedin-icon'
 import YoutubeIcon from '@/components/icons/youtube-icon'
 import { Button } from '@/components/ui/button'
-import { DownloadIcon } from 'lucide-react'
+import { DownloadIcon, SettingsIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -37,15 +38,15 @@ export default function Home() {
             <div className="w-11/12 bg-card flex flex-row gap-5 p-5 mt-10  justify-between rounded-lg">
               <div className="flex flex-col">
                 <h5 className="text-primary">5+</h5>
-                <p className="text-gray-400">Experiences</p>
+                <p className="text-sm text-white font-semibold">Experiences</p>
               </div>
               <div className="flex flex-col border-l-3 border-gray-400 pl-8">
                 <h5 className="text-primary">20+</h5>
-                <p className="text-gray-400">Projects done</p>
+                <p className="text-sm text-white font-semibold">Projects Done</p>
               </div>
               <div className="flex flex-col border-l-3 border-gray-400 pl-8">
                 <h5 className="text-primary">80+</h5>
-                <p className="text-gray-400">Happy Clients</p>
+                <p className="text-sm text-white font-semibold">Happy Clients</p>
               </div>
             </div>
           </div>
@@ -65,6 +66,21 @@ export default function Home() {
             </div>
           </div>
         </TwoColSection>
+        {/* service */}
+        <AppSection>
+          <SectionTitle value="Services" />
+          <SectionDescription value="Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam" />
+          <div className="grid grid-cols-3 gap-5 mt-10">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <ServiceCard
+                key={index}
+                name={`Service ${index + 1}`}
+                description="Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam"
+                icon={<SettingsIcon className="text-primary" size={40} />}
+              />
+            ))}
+          </div>
+        </AppSection>
         {/* about me */}
         <AppSection>
           <SectionTitle value="About Me" />
