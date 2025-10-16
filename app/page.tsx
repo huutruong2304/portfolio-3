@@ -1,9 +1,13 @@
+import AppSection from '@/components/custom/app-section'
+import SectionDescription from '@/components/custom/section-description'
+import SectionTitle from '@/components/custom/section-title'
 import TwoColSection from '@/components/custom/two-col-section'
 import FacebookIcon from '@/components/icons/facebook-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import LinkedinIcon from '@/components/icons/linkedin-icon'
 import YoutubeIcon from '@/components/icons/youtube-icon'
 import { Button } from '@/components/ui/button'
+import { DownloadIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -45,7 +49,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end select-none">
             <div className="relative w-[400px] aspect-square">
               <div className="bg-card w-full aspect-square mx-auto rounded-full absolute bottom-0 right-0" />
               <div className="w-full h-[125%] absolute bottom-0 rounded-full overflow-hidden right-0">
@@ -61,6 +65,47 @@ export default function Home() {
             </div>
           </div>
         </TwoColSection>
+        {/* about me */}
+        <AppSection>
+          <SectionTitle value="About Me" />
+          <SectionDescription value="User Interface and User Experience and Also video editing " />
+          <TwoColSection>
+            <div className="flex justify-start select-none">
+              <div className="relative w-[400px] aspect-square">
+                <div className="bg-card w-full aspect-square mx-auto rounded-full absolute bottom-0 right-0" />
+                <div className="w-full h-[125%] absolute bottom-0 rounded-full overflow-hidden right-0">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={'/images/avatar.png'}
+                      fill
+                      className="object-contain "
+                      alt="truong nguyen avatar"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <p className="text-justify">
+                A software engineer, the modern-day architect of digital realms, navigates the
+                ethereal landscapes of code, sculpting intangible structures that shape our
+                technological world. With fingers poised over keyboards like virtuoso pianists, they
+                compose symphonies of logic, their minds a labyrinth of algorithms and
+                solutions.Their canvas is a screen, a vast expanse where lines of code dance in
+                intricate patterns, weaving the fabric of programs and applications. Each keystroke
+                is a brushstroke, crafting intricate architectures and breathing life into
+                innovative designs.In this digital atelier, they don the mantle of problem solvers,
+                confronting bugs and glitches like valiant knights in an ever-evolving quest for
+                perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden
+                within the tangled webs of code. designs.In this digital atelier.
+              </p>
+              <Button className="my-10 min-w-40">
+                <DownloadIcon /> Download CV
+              </Button>
+            </div>
+          </TwoColSection>
+        </AppSection>
+        <div></div>
       </div>
     </div>
   )
