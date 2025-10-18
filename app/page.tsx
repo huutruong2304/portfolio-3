@@ -1,4 +1,5 @@
 import AppSection from '@/components/custom/app-section'
+import ProgressSkill from '@/components/custom/progress-skill'
 import SectionDescription from '@/components/custom/section-description'
 import SectionTitle from '@/components/custom/section-title'
 import ServiceCard from '@/components/custom/service-card'
@@ -6,6 +7,8 @@ import TwoColSection from '@/components/custom/two-col-section'
 import FacebookIcon from '@/components/icons/facebook-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import LinkedinIcon from '@/components/icons/linkedin-icon'
+import NextJSIcon from '@/components/icons/nextjs-icon'
+import TailwindIcon from '@/components/icons/nextjs-icon copy'
 import ReactIcon from '@/components/icons/react-icon'
 import YoutubeIcon from '@/components/icons/youtube-icon'
 import { Button } from '@/components/ui/button'
@@ -13,6 +16,13 @@ import { DownloadIcon, FigmaIcon, SettingsIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
+  const skills: { name: string; percentage: number; icon: React.ElementType }[] = [
+    { name: 'Figma', percentage: 90, icon: FigmaIcon },
+    { name: 'React', percentage: 80, icon: ReactIcon },
+    { name: 'Next JS', percentage: 80, icon: NextJSIcon },
+    { name: 'Tailwind CSS', percentage: 80, icon: TailwindIcon },
+    { name: 'Nest JS', percentage: 80, icon: SettingsIcon },
+  ]
   return (
     <div>
       {/* Home */}
@@ -121,13 +131,18 @@ export default function Home() {
               </Button>
             </div>
           </TwoColSection>
-          <div>
-            <div className="w-24 aspect-square border-8 border-primary rounded-full flex justify-center items-center">
-             <
-            </div>
+          {/* skills */}
+          <div className="grid grid-cols-5">
+            {skills.map((skill, index) => (
+              <ProgressSkill
+                key={index}
+                name={skill.name}
+                percentage={skill.percentage}
+                icon={skill.icon}
+              />
+            ))}
           </div>
         </AppSection>
-        <div></div>
       </div>
     </div>
   )
