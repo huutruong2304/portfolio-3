@@ -6,9 +6,10 @@ import TwoColSection from '@/components/custom/two-col-section'
 import FacebookIcon from '@/components/icons/facebook-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import LinkedinIcon from '@/components/icons/linkedin-icon'
+import ReactIcon from '@/components/icons/react-icon'
 import YoutubeIcon from '@/components/icons/youtube-icon'
 import { Button } from '@/components/ui/button'
-import { DownloadIcon, SettingsIcon } from 'lucide-react'
+import { DownloadIcon, FigmaIcon, SettingsIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -120,6 +121,11 @@ export default function Home() {
               </Button>
             </div>
           </TwoColSection>
+          <div>
+            <div className="w-24 aspect-square border-8 border-primary rounded-full flex justify-center items-center">
+             <
+            </div>
+          </div>
         </AppSection>
         <div></div>
       </div>
