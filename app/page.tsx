@@ -1,4 +1,5 @@
 import AppSection from '@/components/custom/app-section'
+import PortfolioCard from '@/components/custom/portfolio-card'
 import ProgressSkill from '@/components/custom/progress-skill'
 import SectionDescription from '@/components/custom/section-description'
 import SectionTitle from '@/components/custom/section-title'
@@ -23,6 +24,41 @@ export default function Home() {
     { name: 'Tailwind CSS', percentage: 80, icon: TailwindIcon },
     { name: 'Nest JS', percentage: 80, icon: SettingsIcon },
   ]
+  const portfolioTopics: { id: string; name: string }[] = [
+    { id: 'all', name: 'All' },
+    { id: 'ecommerce', name: 'E-commerce' },
+    { id: 'personal-website', name: 'Personal Website' },
+    { id: 'dashboard', name: 'Dashboard' },
+    { id: 'landing-page', name: 'Landing Page' },
+  ]
+
+  const projects: { name: string; thumbnail: string; href: string; category?: string }[] = [
+    {
+      name: 'E-commerce',
+      thumbnail: '/images/project-1.png',
+      href: '#',
+      category: 'E-commerce',
+    },
+    {
+      name: 'Personal Website',
+      thumbnail: '/images/project-1.png',
+      href: '#',
+      category: 'Personal Website',
+    },
+    {
+      name: 'Dashboard',
+      thumbnail: '/images/project-1.png',
+      href: '#',
+      category: 'Dashboard',
+    },
+    {
+      name: 'Landing Page',
+      thumbnail: '/images/project-1.png',
+      href: '#',
+      category: 'Landing Page',
+    },
+  ]
+
   return (
     <div>
       {/* Home */}
@@ -139,6 +175,32 @@ export default function Home() {
                 name={skill.name}
                 percentage={skill.percentage}
                 icon={skill.icon}
+              />
+            ))}
+          </div>
+        </AppSection>
+        {/* portfolio */}
+        <AppSection>
+          <SectionTitle value="Portfolio" />
+          <div className="flex flex-wrap justify-center w-3/4 mx-auto">
+            {portfolioTopics.map((topic, index) => (
+              <Button
+                key={topic.id}
+                className="my-2 mr-2 cursor-pointer"
+                variant={topic.id === 'all' ? 'default' : 'secondary'}
+              >
+                {topic.name}
+              </Button>
+            ))}
+          </div>
+          <div className="grid grid-cols-4 gap-5 mt-10">
+            {projects.map((project, index) => (
+              <PortfolioCard
+                key={index}
+                name={project.name}
+                thumbnail={project.thumbnail}
+                href={project.href}
+                category={project.category}
               />
             ))}
           </div>
