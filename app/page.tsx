@@ -5,6 +5,7 @@ import SectionDescription from '@/components/custom/section-description'
 import SectionTitle from '@/components/custom/section-title'
 import ServiceCard from '@/components/custom/service-card'
 import TwoColSection from '@/components/custom/two-col-section'
+import ContactForm from '@/components/form/contact-form'
 import FacebookIcon from '@/components/icons/facebook-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import LinkedinIcon from '@/components/icons/linkedin-icon'
@@ -204,6 +205,12 @@ export default function Home() {
               />
             ))}
           </div>
+        </AppSection>
+        {/* contact me */}
+        <AppSection>
+          <SectionTitle value="Contact me" />
+          <SectionDescription value="Cultivating Connections: Reach Out and Connect with Me" />
+          <ContactForm />
         </AppSection>
       </div>
     </div>
