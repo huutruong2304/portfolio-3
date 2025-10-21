@@ -13,12 +13,12 @@ const PortfolioCard = ({ name, thumbnail, href, category }: Props) => {
   return (
     <Link
       href={href}
-      className="bg-card rounded-2xl overflow-hidden border border-transparent hover:border-primary transition duration-300"
+      className="bg-card rounded-2xl overflow-hidden border hover:border-primary transition duration-300"
     >
       <div className="w-full min-w-20 aspect-square relative">
         <Image src={thumbnail} alt={name} fill className="object-cover" />
       </div>
-      <div className="flex justify-between px-4 py-4 font-semibold text-sm">
+      <div className="flex flex-col md:flex-row justify-between px-4 py-4 font-semibold text-sm gap-2 md:gap-0 lg:text-sm">
         <h3 className="line-clamp-2">{name}</h3>
         <h3 className="line-clamp-2">{category}</h3>
       </div>

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Button } from '../ui/button'
-import { Sheet, SheetClose, SheetContent, SheetFooter, SheetTrigger } from '../ui/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 import { MenuIcon } from 'lucide-react'
 
-type Props = {}
-
-const AppHeader = (props: Props) => {
+const AppHeader = () => {
   const headerList: { id: string; name: string; href: string }[] = [
     {
       id: 'home',

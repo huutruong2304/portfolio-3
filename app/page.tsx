@@ -35,25 +35,25 @@ export default function Home() {
 
   const projects: { name: string; thumbnail: string; href: string; category?: string }[] = [
     {
-      name: 'E-commerce',
+      name: 'Anhphibantao',
       thumbnail: '/images/project-1.png',
       href: '#',
       category: 'E-commerce',
     },
     {
-      name: 'Personal Website',
+      name: 'CodingWithTruong',
       thumbnail: '/images/project-1.png',
       href: '#',
       category: 'Personal Website',
     },
     {
-      name: 'Dashboard',
+      name: 'Anhphi Dashboard',
       thumbnail: '/images/project-1.png',
       href: '#',
       category: 'Dashboard',
     },
     {
-      name: 'Landing Page',
+      name: 'VF3 Landing Page',
       thumbnail: '/images/project-1.png',
       href: '#',
       category: 'Landing Page',
@@ -65,25 +65,25 @@ export default function Home() {
       {/* Home */}
       <div className="app-container">
         <TwoColSection>
-          <div className="bg-[url('/images/home-vector.png')] bg-cover bg-center">
+          <div className="bg-[url('/images/home-vector.png')] bg-cover bg-center order-2 md:order-1 text-center md:text-left">
             <p className="text-gray-500">Hi I am</p>
             <h2 className="text-lg font-semibold text-gray-400">Truong Nguyen</h2>
-            <h1 className="text-6xl font-semibold text-primary">UI/UX Designer</h1>
+            <h1 className="text-4xl md:text-6xl font-semibold text-primary">UI/UX Designer</h1>
 
-            <div className="flex gap-4 mt-10 mx-auto">
+            <div className="flex gap-4 mt-6 md:mt-10 mx-auto justify-center md:justify-start">
               <FacebookIcon className="icon-hover" />
               <GithubIcon className="icon-hover" />
               <LinkedinIcon className="icon-hover" />
               <YoutubeIcon className="icon-hover" />
             </div>
-            <div className="flex gap-4 mt-10">
+            <div className="flex gap-4 mt-10 justify-center md:justify-start">
               <Button className="min-w-36"> Hire Me</Button>
               <Button className="min-w-36" variant={'outline'}>
                 Download CV
               </Button>
             </div>
 
-            <div className="w-11/12 bg-card flex flex-row gap-5 p-5 mt-10  justify-between rounded-lg">
+            <div className="w-full md:w-11/12 bg-card flex flex-row gap-5 p-5 mt-10  justify-between rounded-lg">
               <div className="flex flex-col">
                 <h5 className="text-primary">5+</h5>
                 <p className="text-sm text-white font-semibold">Experiences</p>
@@ -98,8 +98,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end select-none">
-            <div className="relative w-[400px] aspect-square">
+          <div className="flex justify-center md:justify-end select-none  mt-10 md:mt-0 order-1 md:order-2">
+            <div className="relative w-1/2 md:w-[400px] aspect-square">
               <div className="bg-card w-full aspect-square mx-auto rounded-full absolute bottom-0 right-0" />
               <div className="w-full h-[125%] absolute bottom-0 rounded-full overflow-hidden right-0">
                 <div className="relative w-full h-full">
@@ -118,7 +118,7 @@ export default function Home() {
         <AppSection>
           <SectionTitle value="Services" />
           <SectionDescription value="Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam" />
-          <div className="grid grid-cols-3 gap-5 mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-5 md:mt-10">
             {Array.from({ length: 6 }).map((_, index) => (
               <ServiceCard
                 key={index}
@@ -134,8 +134,8 @@ export default function Home() {
           <SectionTitle value="About Me" />
           <SectionDescription value="User Interface and User Experience and Also video editing " />
           <TwoColSection>
-            <div className="flex justify-start select-none">
-              <div className="relative w-[400px] aspect-square">
+            <div className="flex justify-center md:justify-start select-none mt-10 md:mt-0">
+              <div className="relative w-1/2 md:w-[400px] aspect-square">
                 <div className="bg-card w-full aspect-square mx-auto rounded-full absolute bottom-0 right-0" />
                 <div className="w-full h-[125%] absolute bottom-0 rounded-full overflow-hidden right-0">
                   <div className="relative w-full h-full">
@@ -163,9 +163,11 @@ export default function Home() {
                 perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden
                 within the tangled webs of code. designs.In this digital atelier.
               </p>
-              <Button className="my-10 min-w-40">
-                <DownloadIcon /> Download CV
-              </Button>
+              <div className="text-center md:text-left">
+                <Button className="my-5 md:my-10 min-w-40">
+                  <DownloadIcon /> Download CV
+                </Button>
+              </div>
             </div>
           </TwoColSection>
           {/* skills */}
@@ -183,8 +185,8 @@ export default function Home() {
         {/* portfolio */}
         <AppSection>
           <SectionTitle value="Portfolio" />
-          <div className="flex flex-wrap justify-center w-3/4 mx-auto">
-            {portfolioTopics.map((topic, index) => (
+          <div className="flex flex-wrap justify-center w-full md:w-3/4 mx-auto">
+            {portfolioTopics.map((topic) => (
               <Button
                 key={topic.id}
                 className="my-2 mr-2 cursor-pointer"
@@ -194,7 +196,7 @@ export default function Home() {
               </Button>
             ))}
           </div>
-          <div className="grid grid-cols-4 gap-5 mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
             {projects.map((project, index) => (
               <PortfolioCard
                 key={index}
