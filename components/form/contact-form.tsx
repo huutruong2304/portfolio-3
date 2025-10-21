@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-// shadcn/ui
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -25,9 +24,6 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-// --------------------
-// Schema & Types (Yup)
-// --------------------
 const FormSchema = yup.object({
   name: yup.string().min(2, 'Your name is too short').required('Name is required'),
   email: yup.string().email('Please provide a valid email').required('Email is required'),
@@ -40,7 +36,8 @@ const FormSchema = yup.object({
     .required('Project details are required'),
 })
 
-type FormValues = yup.InferType<typeof FormSchema>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type FormValues = yup.InferType<any>
 
 const SERVICES = ['Web Development', 'UI/UX Design', 'Branding', 'Consultation', 'Other']
 

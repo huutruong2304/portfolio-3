@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button } from '../ui/button';
-import { Sheet, SheetClose, SheetContent, SheetFooter, SheetTrigger } from '../ui/sheet';
-import { MenuIcon } from 'lucide-react';
+import React from 'react'
+import { Button } from '../ui/button'
+import { Sheet, SheetClose, SheetContent, SheetFooter, SheetTrigger } from '../ui/sheet'
+import { MenuIcon } from 'lucide-react'
 
-type Props = {};
+type Props = {}
 
 const AppHeader = (props: Props) => {
   const headerList: { id: string; name: string; href: string }[] = [
@@ -27,10 +27,10 @@ const AppHeader = (props: Props) => {
       name: 'Contact Me',
       href: '#contact',
     },
-  ];
+  ]
 
   return (
-    <div className="w-full py-10 sticky top-0 z-50 left-0">
+    <div className="w-full py-10 sticky top-0 z-50 left-0 bg-background">
       <div className="app-container flex justify-between items-center">
         <div className="md:hidden">
           <Sheet>
@@ -40,7 +40,10 @@ const AppHeader = (props: Props) => {
             <SheetContent className="pt-20 w-[240px]">
               <ul className="gap-5 flex flex-col px-4">
                 {headerList.map((item) => (
-                  <li className="text-sm font-bold text-gray-300 hover:text-primary hover-transition" key={item.id}>
+                  <li
+                    className="text-sm font-bold text-gray-300 hover:text-primary hover-transition"
+                    key={item.id}
+                  >
                     <a href={item.href}>{item.name}</a>
                   </li>
                 ))}
@@ -57,7 +60,10 @@ const AppHeader = (props: Props) => {
         <div className="text-primary uppercase font-bold text-2xl text-center">Logo</div>
         <ul className="gap-10 hidden md:flex">
           {headerList.map((item) => (
-            <li className="text-sm font-semibold text-gray-300 hover:text-primary  hover-transition" key={item.id}>
+            <li
+              className="text-sm font-semibold text-gray-300 hover:text-primary  hover-transition"
+              key={item.id}
+            >
               <a href={item.href}>{item.name}</a>
             </li>
           ))}
@@ -67,7 +73,7 @@ const AppHeader = (props: Props) => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppHeader;
+export default AppHeader
