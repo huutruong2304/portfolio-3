@@ -8,7 +8,7 @@ An open-source Next.js portfolio template with a minimalist and modern aesthetic
 - **Why did you build it?** (e.g., I wanted to practice my Next.js skills and create a useful template for the community.)
 - **Who is the target audience?** (e.g., Developers, designers, content creators.)
 
-<!-- [Link to Live Demo](https://coding-with-truong-portfolio-2.vercel.app/) -->
+[Link to Live Demo](https://coding-with-truong-portfolio-3.vercel.app/)
 
 ## ✨ Key Features
 
