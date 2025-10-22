@@ -13,12 +13,17 @@ const AppHeader = () => {
     {
       id: 'services',
       name: 'Services',
-      href: '#service',
+      href: '#services',
     },
     {
       id: 'about',
       name: 'About Me',
       href: '#about',
+    },
+    {
+      id: 'portfolio',
+      name: 'Portfolio',
+      href: '#portfolio',
     },
     {
       id: 'contact',
@@ -32,7 +37,7 @@ const AppHeader = () => {
       <div className="app-container flex justify-between items-center">
         <div className="md:hidden">
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger className="w-20">
               <MenuIcon />
             </SheetTrigger>
             <SheetContent className="pt-20 w-[240px]">
@@ -66,7 +71,7 @@ const AppHeader = () => {
             </li>
           ))}
         </ul>
-        <Button className="md:min-w-28" size={'sm'}>
+        <Button className="w-20 md:min-w-28" size={'sm'}>
           Hire me{' '}
         </Button>
       </div>

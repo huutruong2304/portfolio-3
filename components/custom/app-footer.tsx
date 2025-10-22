@@ -6,9 +6,7 @@ import YoutubeIcon from '../icons/youtube-icon'
 import Link from 'next/link'
 import { MailIcon, PhoneCallIcon } from 'lucide-react'
 
-type Props = {}
-
-const AppFooter = (props: Props) => {
+const AppFooter = () => {
   const headerList: { id: string; name: string; href: string }[] = [
     {
       id: 'home',
@@ -32,8 +30,8 @@ const AppFooter = (props: Props) => {
     },
   ]
   return (
-    <div className="w-full py-10">
-      <div className="w-1/2 mx-auto text-center">
+    <div className="app-container">
+      <div className="w-full md:w-1/2 mx-auto text-center">
         <div className="text-primary uppercase font-bold text-2xl py-5">Logo</div>
         <ul className="gap-10 hidden md:flex justify-center py-5">
           {headerList.map((item) => (
